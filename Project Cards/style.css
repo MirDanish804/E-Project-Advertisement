@@ -1,0 +1,144 @@
+/* Body and Basic Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+}
+
+header {
+    background-color: #f8fbff;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #f8ab33;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 20px;
+}
+
+/* Card Styling */
+/* Card Styling */
+/* Card Styling */
+.card {
+    background-color: #ffffff;
+    width: 280px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    perspective: 1000px; /* Enable 3D perspective for cards */
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    position: relative;
+    transform: translateY(-50px); /* Initially position the card 50px above */
+}
+
+
+
+.card:hover {
+    transform: rotateY(20deg) rotateX(10deg); /* 3D rotation on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensure the image covers the top section of the card */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(239, 239, 239, 0.1);
+    transition: background-color 0.s ease;
+    z-index: -1;
+}
+
+.card:hover::before {
+    background-color: rgba(183, 183, 183, 0.2); /* Color overlay on hover */
+}
+
+/* Card Content */
+.box-content {
+    padding: 20px;
+    text-align: center;
+}
+
+h2, p, button {
+    transition: all 0.3s ease; /* Transition for the hover animation */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #181717;
+    font-weight: bold;
+}
+
+/* Price styling */
+.box-content p:nth-child(2) {
+    font-size: 20px;
+    color: #ff5733; /* Highlight the price */
+    font-weight: bold;
+}
+
+/* Button Styling */
+.button {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #fefefe00;
+    transform: scale(1.1); /* Button grows on hover */
+    color: chocolate;
+    border: 1px solid chocolate;
+}
+
+
+ 
+/* Responsive Cards */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+}
