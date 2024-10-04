@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form input,
+form textarea{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom:10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    color: #333;
+
+}
+form input:focus,
+form textarea:focus{
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+form button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+   border: none;
+   border-radius: 5px;
+   background-color: #333;
+   color: #fff;
+   font-size: 16px;
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+form button:hover{
+    background-color: #555;
+    transform: scale(1.05);
+}
+.thank-you-message {
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.9s ease-in-out, visibility 0s 1s; 
+    text-align: center;
+    margin-top: 20px;
+}
+.thank-you-message.show {
+    opacity: 1; 
+    visibility: visible; 
+    transition: opacity 1s ease-in-out, visibility 0s 0s; 
+}
